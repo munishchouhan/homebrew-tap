@@ -1,10 +1,10 @@
-# Generated with JReleaser 1.9.0 at 2023-12-05T15:18:09.839014419Z
+# Generated with JReleaser 1.9.0 at 2023-12-05T16:49:32.361490888Z
 class WaveCli < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
   url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip", :using => :nounzip
   version "1.1.0"
-  sha256 "4368f723d06a16c17f63d2c17d6dead5029ef35a9a2115310f78e06b7da0c416"
+  sha256 "a36f48a6af473afc475564dec5a6e4562f3aebc88c2607af2b6322222d71c327"
   license "MPL-2.0"
 
 
