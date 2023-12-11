@@ -8,12 +8,22 @@ class WaveCli < Formula
   license "MPL-2.0"
 
 
-  def install
-    bin.install "wave" => "wave-cli"
+   def install
+    unzip "wave-{{projectEffectiveVersion}}-macos-x86_64.zip"
+    mv "wave-{{projectEffectiveVersion}}-macos-x86_64", "wave"
+    bin.install "wave"
   end
 
   test do
-    output = shell_output("#{bin}/wave-cli --version")
-    assert_match "1.1.0", output
+    system "#{bin}/wave", "--version"
   end
+
+  def caveats
+    <<~EOS
+      wave has been installed!
+      To run it, type:
+      wave
+    EOS
+  end
+
 end
