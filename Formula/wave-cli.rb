@@ -1,29 +1,19 @@
-# Generated with JReleaser 1.9.0 at 2023-12-08T14:05:03.56393612Z
+# Generated with JReleaser 1.9.0 at 2023-12-11T13:25:49.480077213Z
 class WaveCli < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
-  url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
+  url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip", :using => :nounzip
   version "1.1.0"
-  sha256 "0facd07889cf76d1596669e4b3cb0f92b359faacc0490bf377fa78182131ebb7"
+  sha256 "841f917b744381f4dfffe8d9582e53f234ca38a47e851110c7ab4cc15487c10c"
   license "MPL-2.0"
 
 
-   def install
-    unzip "wave-{{projectEffectiveVersion}}-macos-x86_64.zip"
-    mv "wave-{{projectEffectiveVersion}}-macos-x86_64", "wave"
-    bin.install "wave"
+  def install
+    bin.install "wave" => "wave-cli"
   end
 
   test do
-    system "#{bin}/wave", "--version"
+    output = shell_output("#{bin}/wave-cli --version")
+    assert_match "1.1.0", output
   end
-
-  def caveats
-    <<~EOS
-      wave has been installed!
-      To run it, type:
-      wave
-    EOS
-  end
-
 end
