@@ -7,7 +7,6 @@ class Wave < Formula
   sha256 "6ce417f40c87f52459b2fe9275223732b3ff666398279fc9ab165864b9cdc34e"
   license "MPL-2.0"
 
-
   def install
     bin.install "wave" => "wave"
   end
