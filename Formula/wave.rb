@@ -4,7 +4,7 @@ class Wave < Formula
   homepage "https://github.com/seqeralabs/wave-cli"
   url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip", :using => :nounzip
   version "1.1.0"
-  sha256 "fa0c181ff4757fb235e33954dd4d68cad703542100f1ae5d8164c668052341a1"
+  sha256 "6ce417f40c87f52459b2fe9275223732b3ff666398279fc9ab165864b9cdc34e"
   license "MPL-2.0"
 
 
