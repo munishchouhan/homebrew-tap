@@ -8,7 +8,7 @@ class Wave < Formula
   license "MPL-2.0"
 
   def install
-    unzip wave-1.1.0-macos-x86_64.zip
+    unzip "wave-1.1.0-macos-x86_64.zip"
     bin.install "wave" => "wave"
   end
 
