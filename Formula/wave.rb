@@ -13,7 +13,7 @@ class Wave < Formula
       bin.install "wave-1.1.0-linux-x86_64" => "wave"
     end
   end
-  if OS.mac? && Hardware::CPU.intel?
+  if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
     sha256 "38360b23ec2ebf732d235e0893e0a4303e8b68b0d405ac008a96a0f75e71edd0"
 
