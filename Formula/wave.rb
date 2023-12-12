@@ -2,12 +2,11 @@
 class Wave < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
-  url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
   version "1.1.0"
   license "MPL-2.0"
 
     if OS.mac? && Hardware::CPU.arm?
-        url "https://github.com/seqeralabs/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-arm64.zip"
+        url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
         sha256 "91743e75c5a42c95a318df00b029ecb3d468cc58cd4282f3b8702ffd7f1ea55a"
 
         def install
@@ -21,7 +20,7 @@ class Wave < Formula
     end
 
     if OS.mac? && Hardware::CPU.intel?
-        url "https://github.com/seqeralabs/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
+        url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
         sha256 "91743e75c5a42c95a318df00b029ecb3d468cc58cd4282f3b8702ffd7f1ea55a"
 
         def install
