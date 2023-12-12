@@ -18,8 +18,7 @@ class Wave < Formula
     sha256 "42cecd2f1a3b08231ad8c8052e2573439b4c644ac7555997d38a1a3907c4bd00"
 
     def install
-      libexec.install Dir["*"]
-      bin.install_symlink "#{libexec}/bin/wave-1.1.0-macos-x86_64.zip" => "wave"
+      bin.install "wave-1.1.0-macos-x86_64.zip" => "wave"
     end
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
