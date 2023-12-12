@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.9.0 at 2023-12-12T16:25:49.902950196Z
+# Generated with JReleaser 1.9.0 at 2023-12-12T16:43:22.219482293Z
 class Wave < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
@@ -7,7 +7,7 @@ class Wave < Formula
 
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-linux-x86_64"
-    sha256 "ce23977e56b8e14a890d993bfba6a642eef400e7d8eb218aadddd28eb67b226d"
+    sha256 "7d9fa4ca3abb0a09518b400ac3c484c84dc86f1fa8f38f220195fc4defe16519"
 
     def install
       bin.install "wave-1.1.0-linux-x86_64" => "wave"
@@ -15,23 +15,15 @@ class Wave < Formula
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
-    sha256 "a31248098f83998dca84088014c9914ba85ecb8f779941e4ecd81c3c6e9e6fda"
-
-    def install
-      bin.install "wave-1.1.0-macos-x86_64" => "wave"
-    end
-  end
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64"
-    sha256 "299898067063c38646ecffa43afd4548386ea817042a0e45568042c026772126"
+    sha256 "42cecd2f1a3b08231ad8c8052e2573439b4c644ac7555997d38a1a3907c4bd00"
 
     def install
       bin.install "wave-1.1.0-macos-x86_64" => "wave"
     end
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64"
-    sha256 "299898067063c38646ecffa43afd4548386ea817042a0e45568042c026772126"
+    url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
+    sha256 "42cecd2f1a3b08231ad8c8052e2573439b4c644ac7555997d38a1a3907c4bd00"
 
     def install
       bin.install "wave-1.1.0-macos-x86_64" => "wave"
