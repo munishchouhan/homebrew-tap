@@ -30,7 +30,6 @@ class Wave < Formula
     end
   end
 
-
   test do
     output = shell_output("#{bin}/wave --version")
     assert_match "1.1.0", output
