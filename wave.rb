@@ -1,12 +1,12 @@
 # Homebrew Formula for Wave-cli
 
-# Generated with JReleaser 1.9.0 at 2023-12-12T15:42:08.714831605Z
+# Generated with JReleaser 1.9.0 at 2023-12-12T15:55:43.15023349Z
 class Wave < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
-  url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip.zip"
+  url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
   version "1.1.0"
-  sha256 "e3ef90a6ee35a34da3a7d6194bd0c15ba621d6d38c555d94799304a71c21bbb3"
+  sha256 "6e3b70a8649316139c7149e850d5401cbd44e877894541a8074ad6c331e5b7a5"
   license "MPL-2.0"
 
 
