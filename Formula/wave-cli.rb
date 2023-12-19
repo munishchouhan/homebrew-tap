@@ -1,38 +1,31 @@
-# Generated with JReleaser 1.9.0 at 2023-12-19T10:49:52.52623865Z
+# Generated with JReleaser 1.9.0 at 2023-12-19T12:02:54.093034363Z
 class WaveCli < Formula
-    desc "Wave CLI"
-    homepage "https://github.com/seqeralabs/wave-cli"
-    version "1.1.0"
-    license "MPL-2.0"
+  desc "Wave CLI"
+  homepage "https://github.com/seqeralabs/wave-cli"
+  version "1.1.0"
+  license "MPL-2.0"
 
-    if OS.mac? && Hardware::CPU.arm?
-        url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-linux-x86_64.zip"
-        sha256 "3328091b59c5dec50c3f5d5ab865f6055d2eae41b84fbe11019f7ad1169f89fb"
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-linux-x86_64.zip"
+    sha256 "eb2b7e53a20405d35c395da673805a86332fa4119cc6094244ff67ab61190cb7"
+  end
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
+    sha256 "d8231a56279d924c8be759f2221adb129193edd9eb8f1d021f62d463364ecf20"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
+    sha256 "d8231a56279d924c8be759f2221adb129193edd9eb8f1d021f62d463364ecf20"
+  end
 
-        def install
-            bin.install "wave" => "wave"
-        end
-    end
 
-    if OS.mac? && Hardware::CPU.intel?
-        url "https://github.com/munishchouhan/wave-cli/releases/download/v1.1.0/wave-1.1.0-macos-x86_64.zip"
-        sha256 "3328091b59c5dec50c3f5d5ab865f6055d2eae41b84fbe11019f7ad1169f89fb"
+  def install
+    libexec.install Dir["*"]
+    bin.install_symlink "#{libexec}/bin/wave-cli" => "wave-cli"
+  end
 
-        def install
-            bin.install "wave" => "wave"
-        end
-    end
-
-    test do
-        output = shell_output("#{bin}/wave --version")
-        assert_match "1.1.0", output
-    end
-
-    def caveats
-        <<~EOS
-            wave has been installed!
-            To run it, type:
-            wave --help
-        EOS
-    end
+  test do
+    output = shell_output("#{bin}/wave-cli --version")
+    assert_match "1.1.0", output
+  end
 end
