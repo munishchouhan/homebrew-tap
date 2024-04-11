@@ -1,11 +1,11 @@
-# Generated with JReleaser 1.11.0 at 2024-04-11T12:59:51.885991123Z
+# Generated with JReleaser 1.11.0 at 2024-04-11T13:45:36.640988459Z
 
 class WaveCliJar < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
   url "https://github.com/munishchouhan/wave-cli/releases/download/v1.3.2/wave-1.3.2.jar", :using => :nounzip
   version "1.3.2"
-  sha256 "e56fbdaa80c0910ba11baac23a7bca9d5a18e1d7ccb377033028dcc02bb88345"
+  sha256 "bf0b145a2ed50121fbf42fabaf636f87eb4b66cae9fe6eb073110c4c4e71e178"
   license "Apache-2.0"
 
   depends_on "openjdk@21"
