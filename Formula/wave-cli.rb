@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.14.0 at 2024-10-15T04:22:05.61215871Z
+# Generated with JReleaser 1.16.0 at 2025-01-07T11:03:27.581426341Z
 
 class WaveCli < Formula
   desc "Wave CLI"
@@ -8,26 +8,10 @@ class WaveCli < Formula
 
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/munishchouhan/wave-cli/releases/download/v1.5.0/wave-1.5.0-linux-x86_64", :using => :nounzip
-    sha256 "f40fe102b75a170a55c29a0ac041f230ed07454eeb43ee6fd55db56b73ca5e04"
+    sha256 "f1dac4f863b5e73fb2a22ec3fbc2eeaeb0dca7b555151346a567cfb203d3e837"
 
     def install
       bin.install "wave-1.5.0-linux-x86_64" => "wave"
-    end
-  end
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/munishchouhan/wave-cli/releases/download/v1.5.0/wave-1.5.0-macos-x86_64", :using => :nounzip
-    sha256 "b9bc8357227ea529aec951c7d0edb50370ba8e93ba98eec15b59b26450b87e1d"
-
-    def install
-      bin.install "wave-1.5.0-macos-x86_64" => "wave"
-    end
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/munishchouhan/wave-cli/releases/download/v1.5.0/wave-1.5.0-macos-x86_64", :using => :nounzip
-    sha256 "b9bc8357227ea529aec951c7d0edb50370ba8e93ba98eec15b59b26450b87e1d"
-
-    def install
-      bin.install "wave-1.5.0-macos-x86_64" => "wave"
     end
   end
 
